@@ -30,6 +30,7 @@ Cette application Spring Boot permet de compter en temps réel le nombre de clic
         <td><img src="src/main/resources/Captures/Capture_acces_localhost_8080_clicks_count.png" alt="Nombre de clics"></td>
     </tr>
 </table>
+
 ## Lancement
 
 1. Démarrer un cluster Kafka local.
