@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Compteur de Clics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 2em 3em;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            background: #0984e3;
+            color: #fff;
+            border: none;
+            padding: 1em 2em;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+        button:hover {
+            background: #74b9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue sur le Compteur de Clics !</h1>
+        <p>Appuyez sur le bouton ci-dessous pour enregistrer votre clic.</p>
+        <form action="/click" method="post">
+            <input type="hidden" name="userId" th:value="${userId}" />
+            <button type="submit">Cliquez ici !</button>
+        </form>
+    </div>
+</body>
+</html>
